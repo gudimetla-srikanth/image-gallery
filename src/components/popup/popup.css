@@ -1,0 +1,147 @@
+.pop {
+    width: 600px;
+    position: fixed;
+    top: 20%;
+    left: 31%;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    background-color: rgb(188, 194, 199);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pop_image {
+    flex: 4;
+
+    position: relative;
+}
+
+.pop_owner {
+    flex: 1;
+
+}
+
+.pop_tags {
+    flex: 2;
+
+}
+
+.pop_image1 {
+    object-fit: cover;
+    width: 100%;
+}
+
+.sharing_block {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    color: white
+}
+
+.pop_share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share,
+.info,
+.download {
+    padding: 5px;
+    border: 2px solid white;
+    width: 100px;
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.download {
+    position: absolute;
+    padding: 15px;
+    right: -352px;
+    top: -11px;
+    background-color: rgb(11, 139, 79);
+    border: none;
+}
+
+.pop_owner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.owner_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.popup_owner_photo_image {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 50px;
+}
+
+.popup_user {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.popup_likes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_likes_icon {
+    margin-right: 8px;
+}
+
+.pop_tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5px;
+}
+
+.tagContent {
+    background-color: rgb(199, 205, 210);
+    margin: 2px;
+    padding: 3px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.tags {
+    padding-top: 5px;
+    display: flex;
+}

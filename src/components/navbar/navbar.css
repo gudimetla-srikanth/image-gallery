@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar_wrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app_name,
+.dark_mode {
+    flex: 1;
+    height: 100%;
+}
+
+.search_container {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.app_name,
+.dark_mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar_input {
+    box-sizing: border-box;
+    width: 30vw;
+    height: 30px;
+    padding-left: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(227, 227, 215, 0.7);
+}
+
+.app_name {
+    font-size: 30px;
+    font-family: 'Lobster', sans-serif;
+}
+
+.search_navbar_icon {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.nav_search_block {
+    position: relative;
+    opacity: 0.6;
+}
+
+.toggle_navbar_icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.explore,
+.community,
+.collection {
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.card_list {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    width: 97vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dark_mode_toggel {
+    background-color: black;
+    color: white;
+}
