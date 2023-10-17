@@ -72,3 +72,29 @@
 .collection {
     cursor: pointer;
 }
+
+.search_barR,
+.density_medium {
+    display: none;
+}
+
+@media screen and (max-width:420px) {
+
+    .search_container,
+    .dark_mode {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgb(246, 250, 254);
+    }
+
+    .search_barR,
+    .density_medium {
+        display: block;
+        flex: 1;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+}

@@ -13,3 +13,8 @@
     background-color: black;
     color: white;
 }
+
+.fixed_position {
+    position: sticky;
+    top: 0px;
+}

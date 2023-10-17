@@ -23,21 +23,37 @@ export default function App() {
     fetchData()
   }, [search])
   const { state } = useContext(myUserContext)
+  let width = window.innerWidth;
+  console.log(width)
   return (
     <div>
-      <Navbar setSearch={setSearch} />
-      {loading ? <Loading /> :
-        <>
-          <Background />
-          <div className={`${state.toggle && "dark_mode_toggel"}`}>
-            <div className="card_list">
-              {response?.map((value, key) => {
-                return < Card value={value} key={key} />
-              })}
+      {width < 420 ? <>
+        <div className="fixed_position">
+          <Navbar setSearch={setSearch} />
+          <Background setSearch={setSearch} />
+        </div>
+        {loading ? <Loading /> :
+          <>
+            <div className={`${state.toggle && "dark_mode_toggel"}`}>
+              <div className="card_list">
+                {response?.map((value, key) => {
+                  return < Card value={value} key={key} />
+                })}
+              </div>
             </div>
-          </div>
-        </>}
-
+          </>}</> : <>
+        <Navbar setSearch={setSearch} />
+        {loading ? <Loading /> :
+          <>
+            <Background />
+            <div className={`${state.toggle && "dark_mode_toggel"}`}>
+              <div className="card_list">
+                {response?.map((value, key) => {
+                  return < Card value={value} key={key} />
+                })}
+              </div>
+            </div>
+          </>}</>}
     </div>
   )
 }

@@ -145,3 +145,35 @@
     padding-top: 5px;
     display: flex;
 }
+
+@media screen and (max-width:420px) {
+    .pop {
+        width: 325px;
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        background-color: white;
+    }
+
+    .share,
+    .info,
+    .download {
+        padding: 2px;
+        border: 2px solid white;
+        width: 65px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .download {
+        position: absolute;
+        padding: 15px;
+        right: -164px;
+        top: -16px;
+        background-color: rgb(11, 139, 79);
+        border: none;
+    }
+}
