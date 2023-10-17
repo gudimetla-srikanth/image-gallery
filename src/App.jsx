@@ -38,7 +38,7 @@ export default function App() {
   console.log(width)
   return (
     <div>
-      {/* width if windoow checking */}
+      {/* width of windoow checking */}
       {width < 420 ? <>
         <div className="fixed_position">
           <Navbar setSearch={setSearch} />
