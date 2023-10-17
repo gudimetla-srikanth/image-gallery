@@ -10,10 +10,9 @@ import { myUserContext } from '../../store/Context'
 export default function PopUp({ setShowpopup }) {
     const { state, dispatch } = useContext(myUserContext)
     const popupShow = () => {
-        // dispatch({ type: 'SHOW_POPUP', payload: false })
-        setShowpopup(true)
+        dispatch({ type: 'SHOW_POPUP', payload: false })
     }
-    console.log("no state", state)
+
     return ReactDOM.createPortal(
         <div className={`pop ${state.toggle && "dark_mode_toggel"}`}>
             <div className="close"><CloseIcon className='close_popup' sx={{ fontSize: "40px" }} onClick={popupShow} /></div>

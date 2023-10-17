@@ -6,15 +6,14 @@ import { useContext } from 'react'
 import { myUserContext } from '../../store/Context'
 export default function Card({ value }) {
     const { state, dispatch } = useContext(myUserContext)
-    const [showPopup, setShowpopup] = useState(false)
+    const { showpopup, data } = state;
     const setData = () => {
-        // if (state.showpopup) {
-        //     dispatch({ type: 'SHOW_POPUP', payload: false })
-        // } else {
-        //     dispatch({ type: 'SHOW_POPUP', payload: true })
-        // }
-        dispatch({ type: 'ADD', payload: value })
-        setShowpopup(true)
+        if (state.showpopup === true) {
+            dispatch({ type: 'SHOW_POPUP', payload: false })
+        } else {
+            dispatch({ type: 'ADD', payload: value })
+            dispatch({ type: 'SHOW_POPUP', payload: true })
+        }
     }
     return (
         <div className={`card_container ${state.toggle && "dark_mode_toggel"}`}>
@@ -36,7 +35,7 @@ export default function Card({ value }) {
                     <div className="like_count">{value.likes}</div>
                 </div>
             </div>
-            <div>{showPopup ? <PopUp setShowpopup={setShowpopup} /> : <div></div>}</div>
+            <div>{state.showpopup ? <PopUp /> : <div></div>}</div>
         </div>
     )
 }
