@@ -5,16 +5,25 @@ import Loading from './components/loads/Loading'
 import Card from './components/cards/Card'
 import Navbar from './components/navbar/Navbar'
 import { myUserContext } from './store/Context'
-
 import axios from 'axios'
+
+//Setting up our base url
 axios.defaults.baseURL = 'https://api.unsplash.com/'
 export default function App() {
-  const [search, setSearch] = useState('photos')
+
+  //for content to be sarched on web
+  const [search, setSearch] = useState('technology')
+
+  //loading screen
   const [loading, setLoading] = useState(true)
+
+  //response variable
   const [response, setResponse] = useState([])
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
+
+      //connection string
       await axios(`search/photos?page=1&query=${search}&client_id=${process.env.REACT_APP_URL}`).then(res => {
         setResponse([...res.data.results])
         setLoading(false)
@@ -23,10 +32,13 @@ export default function App() {
     fetchData()
   }, [search])
   const { state } = useContext(myUserContext)
+
+  //finding window width to check current width
   let width = window.innerWidth;
   console.log(width)
   return (
     <div>
+      {/* width if windoow checking */}
       {width < 420 ? <>
         <div className="fixed_position">
           <Navbar setSearch={setSearch} />

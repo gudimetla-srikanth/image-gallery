@@ -1,8 +1,21 @@
 .navbar {
+    position: fixed;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
+    z-index: 9999;
+    width: 100%;
+}
+
+.dark_mode_toggel {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    background-color: white;
 }
 
 .navbar_wrapper {
@@ -40,7 +53,7 @@
     box-sizing: border-box;
     width: 30vw;
     height: 30px;
-    padding-left: 40px;
+    padding-left: 30px;
     border: none;
     border-radius: 5px;
     background-color: rgba(227, 227, 215, 0.7);
@@ -86,7 +99,7 @@
     }
 
     .navbar {
-        background-color: rgb(246, 250, 254);
+        background-color: white;
     }
 
     .search_barR,
@@ -97,4 +110,17 @@
         justify-content: right;
         align-items: center;
     }
+
+    .navbar {
+        position: fixed;
+        z-index: 678;
+        background-color: rgb(246, 250, 255);
+        width: 100%;
+    }
+
+    .search_navbar_iconR {
+        margin-right: 5px;
+    }
+
+
 }

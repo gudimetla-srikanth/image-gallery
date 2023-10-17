@@ -5,8 +5,11 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import { useContext } from 'react'
 import { myUserContext } from '../../store/Context'
 export default function Card({ value }) {
+
+    //destructuring state and dispatch
     const { state, dispatch } = useContext(myUserContext)
-    const { showpopup, data } = state;
+
+    //setting popup data
     const setData = () => {
         if (state.showpopup === true) {
             dispatch({ type: 'SHOW_POPUP', payload: false })

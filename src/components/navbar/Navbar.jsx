@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './navbar.css'
+import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
@@ -20,7 +21,7 @@ export default function Navbar({ setSearch }) {
     console.log("this id for on", state.toggle)
     return (
         <div className={`navbar ${state.toggle && "dark_mode_toggel"}`}>
-            <div className="navbar_wrapper">
+            <div className={`navbar_wrapper ${state.toggle && "dark_mode_toggel"}`}>
                 <div className="app_name">
                     Image Gallary
                 </div>

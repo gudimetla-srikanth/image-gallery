@@ -7,14 +7,14 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ShareIcon from '@mui/icons-material/Share';
 import CloseIcon from '@mui/icons-material/Close';
 import { myUserContext } from '../../store/Context'
-export default function PopUp({ setShowpopup }) {
+export default function PopUp() {
     const { state, dispatch } = useContext(myUserContext)
     const popupShow = () => {
         dispatch({ type: 'SHOW_POPUP', payload: false })
     }
-
+    //popup dom 
     return ReactDOM.createPortal(
-        <div className={`pop ${state.toggle && "dark_mode_toggel"}`}>
+        <div className={`pop  stic ${state.toggle && "dark_mode_toggel"}`}>
             <div className="close"><CloseIcon className='close_popup' sx={{ fontSize: "40px" }} onClick={popupShow} /></div>
             <div className="popup">
                 <div className='pop_image'>
@@ -49,6 +49,14 @@ export default function PopUp({ setShowpopup }) {
                         <div className="tagContent">Buildings</div>
                         <div className="tagContent">Desk top</div>
                         <div className="tagContent">Auto mobiles</div>
+                        <div className="tagContent">Backgrounds</div>
+                        <div className="tagContent">Wallpapers</div>
+                        <div className="tagContent">Gray</div>
+                        <div className="tagContent">Minimalastic Wallpapers</div>
+                        <div className="tagContent">Connifer</div>
+                        <div className="tagContent">Mountains</div>
+                        <div className="tagContent">Landscape</div>
+                        <div className="tagContent">Ice</div>
                     </div>
                 </div>
             </div>
