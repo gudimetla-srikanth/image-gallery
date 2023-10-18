@@ -37,6 +37,10 @@ export default function PopUp() {
                             <div className="popup_owner_username">@{state.data.user.username}</div>
                         </div>
                     </div>
+                    <div className="social">
+                        <div className="insta">insta/{state.data.user.instagram_username}</div>
+                        <div className="twitter">tiwtter/{state.data.user.twitter_username}</div>
+                    </div>
                     <div className={`popup_likes ${state.toggle && "dark_mode_toggel"}`}>
                         <div className="popup_likes_icon"><ThumbUpOffAltIcon /></div>
                         <div className="popup_like_count">{state.data.likes}</div>

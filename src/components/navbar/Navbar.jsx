@@ -9,6 +9,7 @@ import { myUserContext } from '../../store/Context';
 export default function Navbar({ setSearch }) {
     const [toggle, setToggle] = useState(false)
     const { state, dispatch } = useContext(myUserContext)
+    const [sidebar, setSidebar] = useState(false)
     const toggle_mode = () => {
         if (toggle) {
             dispatch({ type: 'TOGGEL_CHANGE', payload: false })
@@ -40,16 +41,26 @@ export default function Navbar({ setSearch }) {
                     {toggle ? <><div className="dark_mode_name">Light Mode</div><ToggleOnIcon onClick={toggle_mode} className='toggle_navbar_icon' sx={{ fontSize: "60px" }} /></>
                         : <><div className="dark_mode_name">Dark Mode</div><ToggleOffIcon onClick={toggle_mode} className='toggle_navbar_icon' sx={{ fontSize: "60px" }} /></>}
                 </div>
-                <div className="search_barR">
+
+                <div className="another">
+                    <div className="search_barR">
+                    </div>
                     <div className="search_iconR">
                         <SearchIcon className='search_navbar_iconR' sx={{ fontSize: "30px" }} />
                     </div>
+                    {sidebar ? <div className={`over ${state.toggle && "dark_mode_toggel"}`}>
+                        <div className="over_icon" onClick={() => setSidebar(false)}><CloseIcon sx={{ fontSize: "50px" }} /></div>
+                        <div className={`over_content ${state.toggle && "dark_mode_toggel"}`}>
+                            <div className="Explore">Explore</div>
+                            <div className="Collection">Collection</div>
+                            <div className="Community">Community</div>
+                        </div>
+                    </div> : <div></div>}
                     <div className="bars">
-                        <DensityMediumIcon className='density_medium' sx={{ fontSize: "30px" }} />
+                        <DensityMediumIcon className='density_medium' sx={{ fontSize: "30px" }} onClick={() => setSidebar(true)} />
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

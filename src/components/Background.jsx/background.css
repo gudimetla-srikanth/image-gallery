@@ -76,7 +76,8 @@
     }
 
     .background {
-        position: fixed;
+        position: sticky;
+        top: 60px;
     }
 
     .back_inputR {

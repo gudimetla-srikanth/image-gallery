@@ -87,8 +87,13 @@
 }
 
 .search_barR,
-.density_medium {
+.density_medium,
+.search.iconR {
     display: none;
+}
+
+.another {
+    display: none
 }
 
 @media screen and (max-width:420px) {
@@ -96,6 +101,10 @@
     .search_container,
     .dark_mode {
         display: none;
+    }
+
+    .another {
+        display: block;
     }
 
     .navbar {
@@ -111,16 +120,57 @@
         align-items: center;
     }
 
+    .search.iconR {
+        background-color: blueviolet;
+    }
+
+
     .navbar {
-        position: fixed;
+        position: sticky;
         z-index: 678;
         background-color: rgb(246, 250, 255);
         width: 100%;
     }
 
-    .search_navbar_iconR {
-        margin-right: 5px;
+    .dark_mode_toggel {
+        background-color: black;
     }
 
+    .search_navbar_iconR {
+        margin-right: 5px;
+        position: absolute;
+        right: 30px;
+    }
 
+    .over {
+        position: fixed;
+        width: 100%;
+        height: 200vh;
+        z-index: 56675;
+        top: 0px;
+        left: 0px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .over_content {
+        padding: 10px;
+    }
+
+    .Explore,
+    .Collection,
+    .Community {
+        padding: 5px;
+        margin: 5px;
+        border-bottom: 2px solid black;
+    }
+
+    .Explore:hover,
+    .Collection:hover,
+    .Community:hover {
+        background-color: azure;
+    }
+
+    .app_name {
+        padding-right: 190px;
+    }
 }

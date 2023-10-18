@@ -27,7 +27,6 @@
 
 .pop_image {
     flex: 4;
-
     position: relative;
 }
 
@@ -42,7 +41,6 @@
 }
 
 .pop_image1 {
-    object-fit: cover;
     width: 100%;
 }
 
@@ -70,6 +68,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .download {
@@ -111,6 +110,20 @@
     flex-direction: column;
     justify-content: left;
     align-items: center;
+    cursor: pointer;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.insta,
+.twitter {
+    margin: 5px;
+    cursor: pointer;
 }
 
 .popup_likes {
@@ -176,5 +189,9 @@
         top: -16px;
         background-color: rgb(11, 139, 79);
         border: none;
+    }
+
+    .pop_owner {
+        flex-wrap: wrap;
     }
 }

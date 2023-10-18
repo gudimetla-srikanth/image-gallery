@@ -5,6 +5,9 @@
     flex-direction: column;
     border-radius: 10px;
     margin: 10px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .card_image {
@@ -69,4 +72,18 @@
     height: 50px;
     border-radius: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width:420px) {
+    .card_container {
+        width: 430px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 10px;
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+    }
 }
