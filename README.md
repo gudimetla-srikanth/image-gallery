@@ -8,3 +8,5 @@ I used thsi for all icons like search icon,horizontal bars icon etc.
 
 3.Unsplash API
 i used unsplash for generating images directly from web.
+
+make sure to enter your access key to find the application experience.
